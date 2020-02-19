@@ -8,7 +8,7 @@ const forecast = (long, lat, callback) => {
         } else if (body.error) {
             callback({ error: 'Unable to find weather information!!!' }, undefined)
         } else {
-            callback(undefined, `${body.currently.summary}. It is currently  ${body.currently.temperature} degress out. There is a ${body.currently.precip} change of rain.`)
+            callback(undefined, `${body.currently.summary}. It is currently  ${body.currently.temperature} degress out. There is a ${body.currently.precip} change of rain. Wind Speed: ${body.currently.windSpeed}`)
         }
     })
 }
